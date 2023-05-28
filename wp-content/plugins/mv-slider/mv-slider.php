@@ -37,6 +37,8 @@ if (!class_exists('MV _Slider')) {
     {
       $this->define_constants();
 
+      add_action('admin_menu', array($this, 'add_menu'));
+
       require_once(MV_SLIDER_PATH . 'post-types/class.mv-slider-cpt.php');
       $MV_Slider_Post_Type = new MV_Slider_Post_Type();
     }
@@ -63,6 +65,43 @@ if (!class_exists('MV _Slider')) {
 
     public static function uninstall()
     {
+    }
+
+    public function add_menu()
+    {
+      add_menu_page(
+        'MV Slider Options',
+        'MV Slider',
+        'manage_options',
+        'mv_slider_admin',
+        array($this, 'mv_slider_settings_page'),
+        'dashicons-images-alt2'
+      );
+
+      add_submenu_page(
+        'mv_slider_admin',
+        'Manage Slides',
+        'Manage Slides',
+        'manage_options',
+        'edit.php?post_type=mv-slider',
+        null,
+        null
+        );
+
+      add_submenu_page(
+        'mv_slider_admin',
+        'Add new Slide',
+        'Add new Slide',
+        'manage_options',
+        'post-new.php?post_type=mv-slider',
+        null,
+        null
+        );
+    }
+
+    public function mv_slider_settings_page()
+    {
+      echo "This is a test page";
     }
   }
 }
