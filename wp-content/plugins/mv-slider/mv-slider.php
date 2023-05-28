@@ -26,6 +26,26 @@
 // along with MV Slider. If not, see < http://www.gnu.org/licenses/ >.
 
 if (!defined('ABSPATH')) {
- // die('No direct script access');  // message displayed on direct access
+  // die('No direct script access');  // message displayed on direct access
   exit;
+}
+
+if (!class_exists('MV _Slider')) {
+  class MV_Slider
+  {
+    function __construct()
+    {
+      //TODO
+    }
+
+    public function define_constants()
+    {
+      define('MV_SLIDER_PATH', plugin_dir_path(__FILE__));
+      define('MV_SLIDER_URL', plugin_dir_url(__FILE__));
+    }
+  }
+}
+
+if (class_exists('MV_Slider')) {
+  $mv_slider = new MV_Slider();
 }
