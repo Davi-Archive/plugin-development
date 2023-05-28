@@ -41,15 +41,16 @@ if (!class_exists('MV_Slider_Post_Type')) {
       add_meta_box(
         'mv_slider_meta_box',
         'Link Options',
-        array($this,'add_inner_meta_boxes'),
+        array($this, 'add_inner_meta_boxes'),
         'mv-slider',
         'advanced',
         'high'
       );
     }
 
-    public function add_inner_meta_boxes($post){
-
+    public function add_inner_meta_boxes($post)
+    {
+      require_once(MV_SLIDER_PATH . 'views/mv-slider_metabox.php');
     }
   }
 }
