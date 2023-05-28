@@ -3,7 +3,7 @@
 * Plugin Name: MV Slider
 * Plugin URI: http://www.wordpress.org/mv-slider/
 * Version: 1.0
-* Requires at least: 8.0
+* Requires at least: 6.0
 * Author: Davi
 * Author URI: http://www.google.com/
 * License: GPL v2 or later
@@ -36,6 +36,9 @@ if (!class_exists('MV _Slider')) {
     function __construct()
     {
       $this->define_constants();
+
+      require_once(MV_SLIDER_PATH . 'post-types/class.mv-slider-cpt.php');
+      $MV_Slider_Post_Type = new MV_Slider_Post_Type();
     }
 
     public function define_constants()
@@ -48,7 +51,7 @@ if (!class_exists('MV _Slider')) {
     public static function activate()
     {
       // 2 ways to reload the database;
-    //  flush_rewrite_rules();
+      //  flush_rewrite_rules();
       update_option('rewrite_rules', '');
     }
 
