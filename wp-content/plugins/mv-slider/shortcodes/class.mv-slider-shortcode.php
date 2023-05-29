@@ -26,6 +26,10 @@ if (!class_exists('MV_Slider_Shortcode')) {
       if (!empty($id)) {
         $id = array_map('absint', explode(',', $id));
       }
+
+      ob_start();
+      require(MV_SLIDER_PATH . 'views/mv-slider_shortcode.php');
+      return ob_get_clean();
     }
   }
 }
