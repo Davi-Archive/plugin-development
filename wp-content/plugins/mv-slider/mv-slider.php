@@ -81,7 +81,7 @@ if (!class_exists('MV _Slider')) {
     public function add_menu()
     {
       add_menu_page(
-        'MV Slider Options',
+        __('MV Slider Options', 'mv-slider'),
         'MV Slider',
         'manage_options',
         'mv_slider_admin',
@@ -91,8 +91,8 @@ if (!class_exists('MV _Slider')) {
 
       add_submenu_page(
         'mv_slider_admin',
-        'Manage Slides',
-        'Manage Slides',
+        __('Manage Slides', 'mv_slider'),
+        __('Manage Slides', 'mv-slider'),
         'manage_options',
         'edit.php?post_type=mv-slider',
         null,
@@ -101,8 +101,8 @@ if (!class_exists('MV _Slider')) {
 
       add_submenu_page(
         'mv_slider_admin',
-        'Add new Slide',
-        'Add new Slide',
+        __('Add new Slide', 'mv-slider'),
+        __('Add new Slide', 'mv-slider'),
         'manage_options',
         'post-new.php?post_type=mv-slider',
         null,
@@ -116,7 +116,7 @@ if (!class_exists('MV _Slider')) {
         return;
       }
       if (isset($_GET['settings-updated'])) {
-        add_settings_error('mv_slider_options', 'mv_slider_message', 'Settings Saved', 'success');
+        add_settings_error('mv_slider_options', 'mv_slider_message', __('Settings Saved', 'mv-slider'), 'success');
       }
       settings_errors('mv_slider_options');
       require(MV_SLIDER_PATH . 'views/settings-page.php');
@@ -139,6 +139,15 @@ if (!class_exists('MV _Slider')) {
       // if ('post.php' == $pagenow) {
       //   wp_enqueue_style('mv-slider-admin', MV_SLIDER_URL . 'assets/css/admin.css');
       // }
+    }
+
+    public function load_textdomain()
+    {
+      load_plugin_textdomain(
+        'mv-slider',
+        false,
+        dirname(plugin_basename(__FILE__)) . '/languages/'
+      );
     }
   }
 }
