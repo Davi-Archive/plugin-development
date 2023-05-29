@@ -4,7 +4,7 @@ jQuery(window).load(function () {
     touch: true,
     directionNav: false,
     smoothHeight: true,
-    controlNav: true,
+    controlNav: SLIDER_OPTIONS.controlNav,
     slideshowSpeed: 5000,
   });
 });

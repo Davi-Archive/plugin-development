@@ -1,109 +1,142 @@
 /* Flex Slider */
 
-.mv-slider{
-    position: relative;
+.mv-slider {
+  position: relative;
 }
 
-.mv-slider.flexslider{
-    border: 0 !important;
+.mv-slider.flexslider {
+  border: 0 !important;
 }
 
 .mv-slider .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.mv-slider .mvs-container{
-    max-width: 1140px;
-    width: 100%;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
+.mv-slider .mvs-container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.mv-slider .flex-direction-nav{
-    display: none !important;
+.mv-slider .flex-direction-nav {
+  display: none !important;
 }
 
 .mv-slider .flex-control-nav {
-    bottom: 10px !important;
+  bottom: 10px !important;
 }
 
-.mv-slider .flex-direction-nav a{
-    height: 50px;
+.mv-slider .flex-direction-nav a {
+  height: 50px;
 }
 
 .mv-slider .slider-details-container {
-    color: #FFF;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
 }
 
-.mv-slider .slider-details-container .subtitle{
-    margin-bottom: 15px;
+.mv-slider .slider-details-container .subtitle {
+  margin-bottom: 15px;
 }
 
-.mv-slider .slider-details-container .slider-title{
-    color: #FFF;
-    font-weight: 700;
+.mv-slider .slider-details-container .slider-title {
+  color: #fff;
+  font-weight: 700;
 }
 
-.flex-control-paging{
-    width: 100%;
-    list-style:none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 50px;
-    padding-left: 0px;
-    gap: 30px;
+.flex-control-paging {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  padding-left: 0px;
+  gap: 5px;
 }
 
-.flex-control-paging li{
-    background-color: rgb(84, 81, 81);
-    padding: 5px 10px;
-    border-radius: 150px;
+.flex-control-paging li {
+  /* background-color: rgb(84, 81, 81);
+  padding: 5px 10px;
+  border-radius: 150px; */
 }
-.flex-control-paging li a{
-    font-weight: 900;
-    color: #FFF;
-    text-decoration: none;
-}
-
-.flex-control-paging li a:hover{
-    font-weight: 900;
-    color: #929191;
-    text-decoration: none;
+.flex-control-paging li a {
+  color: transparent !important;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 50px;
 }
 
-.mv-slider .slider-details-container a{
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    padding: 5px 25px;
-    display: inline-block;
-    text-decoration: none;
+.flex-control-paging li a:hover {
+  font-weight: 900;
+  color: #929191;
+  text-decoration: none;
 }
 
-.flex-control-paging li a.flex-active{
-    color: orangered;
+.mv-slider .slider-details-container a {
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.mv-slider .slider-details-container a:hover{
-    color: #fff;
+.flex-control-paging li a.flex-active {
+  color: orangered;
+}
+
+.mv-slider .slider-details-container a:hover {
+  color: #fff;
 }
 
 .mv-slider .flexslider .slides {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .mv-slider .flex-control-paging li a.flex-active {
-    width: 25px !important;
+  width: 25px !important;
 }
 
 .mv-slider .flex-control-nav li {
-    margin: 0 3px !important;
+  margin: 0 3px !important;
+}
+
+/* Design Options */
+
+/* Style 1 */
+
+.mv-slider.style-1 .slider-details-container .link {
+  background-color: #1d4671;
+}
+
+.mv-slider.style-1 .flex-control-paging li a.flex-active {
+  background: rgb(182, 2, 2) !important;
+}
+
+.mv-slider.style-1 .flex-control-paging li a {
+  background: rgb(247, 247, 247);
+}
+
+/* Style 2 */
+
+.mv-slider.style-2 .slider-details-container .link {
+  background-color: #71481d;
+}
+
+.mv-slider.style-2 .flex-control-paging li a.flex-active {
+  background: rgb(190, 23, 23) !important;
+  width: 25px;
+}
+
+.mv-slider.style-2 .flex-control-paging li a {
+  background: rgb(84, 81, 81);;
+  border-radius: 50px;
 }

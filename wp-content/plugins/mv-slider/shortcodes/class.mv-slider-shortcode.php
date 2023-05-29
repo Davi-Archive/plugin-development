@@ -30,9 +30,9 @@ if (!class_exists('MV_Slider_Shortcode')) {
       ob_start();
       require(MV_SLIDER_PATH . 'views/mv-slider_shortcode.php');
       wp_enqueue_script('mv-slider-main-js');
-      wp_enqueue_script('mv-slider-options-js');
       wp_enqueue_style('mv-slider-main-css');
       wp_enqueue_style('mv-slider-style-css');
+      mv_slider_options();
       return ob_get_clean();
     }
   }
