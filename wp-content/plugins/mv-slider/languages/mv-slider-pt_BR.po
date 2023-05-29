@@ -1,0 +1,106 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blank WordPress Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2023-05-29 18:01-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class.mv-slider-settings.php:22
+msgid "How does it work?"
+msgstr "Como funciona?"
+
+#: class.mv-slider-settings.php:29
+msgid "Shortcode"
+msgstr "Código curto"
+
+#: class.mv-slider-settings.php:38
+msgid "Other Plugin options"
+msgstr "Outras opções de plug-in"
+
+#: class.mv-slider-settings.php:45 class.mv-slider-settings.php:54
+msgid "Slider Title"
+msgstr "Título do Slider"
+
+#: class.mv-slider-settings.php:63
+msgid "Display Bullets"
+msgstr "Exibir marcadores"
+
+#: class.mv-slider-settings.php:80
+msgid "Whether to display bullets or not"
+msgstr "Se os marcadores devem ser exibidos ou não"
+
+#: class.mv-slider-settings.php:114
+msgid "Use the shortcode (mv_slider) to display the slider in any page/post/widget"
+msgstr "Use o shortcode (mv_slider) para exibir o controle deslizante em qualquer página/post/widget"
+
+#: class.mv-slider-settings.php:133
+msgid "Please enter a value"
+msgstr "Por favor insira um valor"
+
+#: mv-slider.php:84
+msgid "MV Slider Options"
+msgstr "Opções do MV Slider"
+
+#: mv-slider.php:94 mv-slider.php:95
+msgid "Manage Slides"
+msgstr "Administrar Slides"
+
+#: mv-slider.php:104 mv-slider.php:105
+msgid "Add new Slide"
+msgstr "Adicionar Slide"
+
+#: mv-slider.php:119
+msgid "Settings Saved"
+msgstr "Configurações Salvas"
+
+#: post-types/class.mv-slider-cpt.php:19 post-types/class.mv-slider-cpt.php:23
+msgid "Slider"
+msgstr "Slide"
+
+#: post-types/class.mv-slider-cpt.php:20 post-types/class.mv-slider-cpt.php:22
+msgid "Sliders"
+msgstr "Slides"
+
+#: post-types/class.mv-slider-cpt.php:52 views/mv-slider_metabox.php:13
+msgid "Link Text"
+msgstr "Texto do Link"
+
+#: post-types/class.mv-slider-cpt.php:53 views/mv-slider_metabox.php:22
+msgid "Link URL"
+msgstr "URL do Link"
+
+#: post-types/class.mv-slider-cpt.php:73
+msgid "Link Options"
+msgstr "Opções de Link"
+
+#: post-types/class.mv-slider-cpt.php:113
+msgid "Add some text"
+msgstr "Adicionar Texto"
+
+#: views/settings-page.php:7
+msgid "Main Options"
+msgstr "Opções principais"
+
+#: views/settings-page.php:8
+msgid "Additional Options"
+msgstr "Opções Adicionais"
+
+#: views/settings-page.php:19
+msgid "Save Settings"
+msgstr "Salvar Configurações"

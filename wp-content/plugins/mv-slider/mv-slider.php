@@ -9,7 +9,7 @@
 * License: GPL v2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Text Domain: mv-slider
-* Domain Path: /languages/
+* Domain Path: /languages
 */
 
 // MV Slider is free software: you can redistribute it and/or modify
@@ -36,6 +36,8 @@ if (!class_exists('MV _Slider')) {
     function __construct()
     {
       $this->define_constants();
+
+      $this->load_textdomain();
 
       require_once(MV_SLIDER_PATH . 'functions/functions.php');
 
