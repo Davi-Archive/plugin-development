@@ -127,6 +127,7 @@ if (!class_exists('MV_Slider_Settings')) {
         switch ($key) {
           case 'mv_slider_title':
             if (empty($value)) {
+              add_settings_error('mv_slider_options', 'mv_slider_message', 'The title field cannot be empty.', 'error');
               $value = 'Please enter a value';
             }
             $new_input[$key] = sanitize_text_field($value);
