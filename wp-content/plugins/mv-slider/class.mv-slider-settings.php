@@ -19,14 +19,14 @@ if (!class_exists('MV_Slider_Settings')) {
 
       add_settings_section(
         'mv_slider_main_section',
-        __('How does it work?', 'mv-slider'),
+        esc_html__('How does it work?', 'mv-slider'),
         null,
         'mv_slider_page1'
       );
 
       add_settings_field(
         'mv_slider_shortcode',
-        __('Shortcode', 'mv-slider'),
+        esc_html__('Shortcode', 'mv-slider'),
         array($this, 'mv_slider_shortcode_callback'),
         'mv_slider_page1',
         'mv_slider_main_section'
@@ -35,14 +35,14 @@ if (!class_exists('MV_Slider_Settings')) {
       // Page 2
       add_settings_section(
         'mv_slider_second_section',
-        __('Other Plugin options', 'mv-slider'),
+        esc_html__('Other Plugin options', 'mv-slider'),
         null,
         'mv_slider_page2'
       );
 
       add_settings_field(
         'mv_slider_title',
-        __('Slider Title', 'mv-slider'),
+        esc_html__('Slider Title', 'mv-slider'),
         array($this, 'mv_slider_title_callback'),
         'mv_slider_page2',
         'mv_slider_second_section',
@@ -51,7 +51,7 @@ if (!class_exists('MV_Slider_Settings')) {
 
       add_settings_field(
         'mv_slider_bullets',
-        __('Slider Title', 'mv-slider'),
+        esc_html__('Slider Title', 'mv-slider'),
         array($this, 'mv_slider_bullets_callback'),
         'mv_slider_page2',
         'mv_slider_second_section',
@@ -60,7 +60,7 @@ if (!class_exists('MV_Slider_Settings')) {
 
       add_settings_field(
         'mv_slider_style',
-        __('Display Bullets', 'mv-slider'),
+        esc_html__('Display Bullets', 'mv-slider'),
         array($this, 'mv_slider_style_callback'),
         'mv_slider_page2',
         'mv_slider_second_section',
@@ -130,7 +130,7 @@ if (!class_exists('MV_Slider_Settings')) {
           case 'mv_slider_title':
             if (empty($value)) {
               add_settings_error('mv_slider_options', 'mv_slider_message', 'The title field cannot be empty.', 'error');
-              $value = __('Please enter a value','mv-slider');
+              $value = esc_html__('Please enter a value','mv-slider');
             }
             $new_input[$key] = sanitize_text_field($value);
             break;
