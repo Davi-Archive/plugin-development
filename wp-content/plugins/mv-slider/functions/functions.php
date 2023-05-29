@@ -1,5 +1,11 @@
 <?php
 
+function mv_slider_get_placeholder_image(){
+  return "<img src='" . MV_SLIDER_URL . "assets/images/default.jpg' class='img-fluid wp-post-image' />";
+}
+
+
+
 if (!function_exists('mv_slider_options')) {
   function mv_slider_options()
   {
