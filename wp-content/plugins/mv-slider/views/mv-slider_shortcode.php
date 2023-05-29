@@ -1,6 +1,19 @@
-<h3>Title</h3>
+<h3>
+  <?= (!empty($content)) ? esc_html($content) : esc_html(MV_Slider_Settings::$options['mv_slider_title']); ?>
+</h3>
 <div class="mv-slider flexslider">
   <ul class="slides">
+    <?php
+    $args = array(
+      'post_type' => 'mv-slider',
+      'post_status' => 'published',
+      'post__in'=> $id,
+      'orderby'=> $orderby
+    );
+
+    $my_query = new WP_Query($args);
+    
+    ?>
     <li>
       <div class="mvs-container">
         <div class="slider-details-container">
@@ -16,5 +29,6 @@
         </div>
       </div>
     </li>
+
   </ul>
 </div>
