@@ -41,6 +41,9 @@ if (!class_exists('MV _Slider')) {
 
       require_once(MV_SLIDER_PATH . 'post-types/class.mv-slider-cpt.php');
       $MV_Slider_Post_Type = new MV_Slider_Post_Type();
+
+      require_once(MV_SLIDER_PATH . 'class.mv-slider-settings.php');
+      $MV_Slider_Settings = new MV_Slider_Settings();
     }
 
     public function define_constants()
@@ -86,7 +89,7 @@ if (!class_exists('MV _Slider')) {
         'edit.php?post_type=mv-slider',
         null,
         null
-        );
+      );
 
       add_submenu_page(
         'mv_slider_admin',
@@ -96,7 +99,7 @@ if (!class_exists('MV _Slider')) {
         'post-new.php?post_type=mv-slider',
         null,
         null
-        );
+      );
     }
 
     public function mv_slider_settings_page()
