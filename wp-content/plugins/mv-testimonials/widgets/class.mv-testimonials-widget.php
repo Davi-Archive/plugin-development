@@ -21,6 +21,10 @@ class MV_Testimonials_Widget extends WP_Widget
         );
       }
     );
+
+    if (is_active_widget(false, false, $this->id_base)) {
+      add_action('wp_enqueue_scripts', array($this, 'enqueue'));
+    }
   }
   public function form($instance)
   {
@@ -60,6 +64,17 @@ class MV_Testimonials_Widget extends WP_Widget
 <?php
   }
 
+  public function enqueue()
+  {
+    wp_enqueue_style(
+      'mv-testimonials-style-css',
+      MV_TESTIMONIALS_URL . 'assets/css/frontend.css',
+      array(),
+      MV_TESTIMONIALS_VERSION,
+      'all'
+    );
+  }
+
   public function widget($args, $instance)
   {
     $default_title = 'MV Testimonials';
@@ -71,6 +86,7 @@ class MV_Testimonials_Widget extends WP_Widget
 
     echo $args['before_widget'];
     echo $args['before_title'] . $title . $args['after_title'];
+    require(MV_TESTIMONIALS_PATH . 'views/mv-testimonials_widget.php');
     echo $args['after_widget'];
   }
 
