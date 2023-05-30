@@ -46,6 +46,9 @@ if (!class_exists('MV_Testimonials')) {
 
             require_once(MV_TESTIMONIALS_PATH . 'post-types/class.mv-testimonials-cpt.php');
             $MVTestimonialsPostType = new MV_Testimonials_Post_Type();
+
+            require_once(MV_TESTIMONIALS_PATH . 'widgets/class.mv-testimonials-widget.php');
+            $MVTestimonialsWidget = new MV_Testimonials_Widget();
         }
 
         /**
