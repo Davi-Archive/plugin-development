@@ -26,7 +26,7 @@ if ($testimonials->have_posts()) : while ($testimonials->have_posts()) : $testim
           ?>
         </div>
       <?php endif; ?>
-      <?php the_content() ?>
+      <?= the_content() ?>
     </div>
     <div class="meta">
       <?php
@@ -46,3 +46,5 @@ if ($testimonials->have_posts()) : while ($testimonials->have_posts()) : $testim
 endif;
 wp_reset_postdata();
 ?>
+
+<a href="<?= get_post_type_archive_link('mv-testimonials') ?>"><?= esc_html_e('Show More Testimonials', 'mv-testimonials') ?></a>
