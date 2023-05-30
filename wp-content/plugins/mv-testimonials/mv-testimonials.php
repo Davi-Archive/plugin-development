@@ -63,21 +63,31 @@ if (!class_exists('MV_Testimonials')) {
             define('MV_TESTIMONIALS_PATH', plugin_dir_path(__FILE__));
             define('MV_TESTIMONIALS_URL', plugin_dir_url(__FILE__));
             define('MV_TESTIMONIALS_VERSION', '1.0.0');
+            define('MV_TESTIMONIALS_OVERRIDE_PATH_DIR', get_stylesheet_directory() . '/mv-testimonials/');
         }
 
         public function load_custom_archive_template($tpl)
         {
             if (current_theme_supports('mv_testimonials') && is_post_type_archive('mv-testimonials')) {
-                $tpl = MV_TESTIMONIALS_PATH . 'views/templates/archive-mv-testimonials.php';
+                $tpl = $this->get_template_part_location('archive-mv-testimonials.php');
             }
             return $tpl;
         }
         public function load_custom_single_template($tpl)
         {
             if (current_theme_supports('mv_testimonials') && is_singular('mv-testimonials')) {
-                $tpl = MV_TESTIMONIALS_PATH . 'views/templates/single-mv-testimonials.php';
+                $tpl = $this->get_template_part_location('single-mv-testimonials.php');
             }
             return $tpl;
+        }
+
+        public function get_template_part_location($file)
+        {
+            if (file_exists(MV_TESTIMONIALS_OVERRIDE_PATH_DIR . $file)) {
+                $file = MV_TESTIMONIALS_OVERRIDE_PATH_DIR . $file;
+            } else {
+                $file =  MV_TESTIMONIALS_PATH . 'views/templates/' . $file;
+            }
         }
 
         /**
@@ -102,6 +112,20 @@ if (!class_exists('MV_Testimonials')) {
          */
         public static function uninstall()
         {
+
+            delete_option('widget_mv-testimonials');
+
+            $posts = get_posts(
+                array(
+                    'post_type' => 'mv-testimonials',
+                    'number_posts' => -1,
+                    'post_status' => 'any'
+                )
+            );
+
+            foreach ($posts as $post) {
+                wp_delete_post($post->ID, true);
+            }
         }
     }
 }
